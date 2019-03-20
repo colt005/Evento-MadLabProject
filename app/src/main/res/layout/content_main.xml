@@ -5,7 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
+    tools:context="com.mahe.evento.LoginActivity"
     tools:showIn="@layout/app_bar_main">
+
+    <FrameLayout
+        android:id="@+id/main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+
+        android:orientation="vertical" />
 
 </android.support.constraint.ConstraintLayout>

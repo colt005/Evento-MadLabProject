@@ -24,6 +24,11 @@
             android:id="@+id/nav_bookevent"
             android:icon="@drawable/ic_event_available_black_24dp"
             android:title="Book an Event" />
+        <item
+            android:id="@+id/nav_signout"
+            android:icon="@drawable/ic_signout_black_24dp"
+            android:title="Signout" />
+
     </group>
 
     <item android:title="Communicate">

@@ -14,6 +14,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class SplashActivity extends AppCompatActivity {
     private ImageView iv;
 
@@ -21,6 +24,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
 
         Toast.makeText(SplashActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
@@ -31,7 +35,7 @@ public class SplashActivity extends AppCompatActivity {
 
         iv.startAnimation(animation);
         final Intent i = new Intent(this, SignupActivity.class);
-        Thread timer = new Thread() {
+        final Thread timer = new Thread() {
 
             public void run() {
                 try {
@@ -40,8 +44,15 @@ public class SplashActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
-                    startActivity(i);
-                    finish();
+                    if(user == null) {
+                        //user not signed in
+                        startActivity(i);
+                        finish();
+                    }else if(user !=null){
+                        //user signed in
+                        startActivity(new Intent(SplashActivity.this,MainActivity.class));
+                        finish();
+                    }
                 }
 
             }

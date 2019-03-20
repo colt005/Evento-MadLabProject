@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mahe.evento.MainActivity"
+    android:background="@color/bg_login">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:paddingBottom="10dp"
+        tools:context="com.example.administrator.feedbackform.MainActivity"
+        android:background="@color/bg_login">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@color/bg_login">
+
+
+            <TextView
+                android:id="@+id/TextView_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Feedback Is Important For Us!"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="10pt">
+            </TextView>
+
+            <EditText
+                android:id="@+id/et_name_feedback"
+                android:layout_height="wrap_content"
+                android:hint="Enter your name here"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/colorAccent"
+                android:layout_marginTop="25dp"
+                android:layout_width="fill_parent"
+                android:gravity="center"
+                android:layout_gravity="center">
+            </EditText>
+
+            <EditText
+                android:id="@+id/et_email_feedback"
+                android:layout_height="wrap_content"
+                android:hint="Please enter your email here"
+                android:textColorHint="@color/colorAccent"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="8dp"
+                android:layout_width="fill_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                >
+            </EditText>
+            <EditText
+                android:id="@+id/et_phone_feedback"
+                android:layout_height="wrap_content"
+                android:hint="Please enter your phone number here"
+                android:textColorHint="@color/colorAccent"
+                android:inputType="number"
+                android:layout_marginTop="8dp"
+                android:layout_width="fill_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                >
+            </EditText>
+
+            <android.support.v7.widget.AppCompatRatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/et_msg_feedback"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="#FFFDE7"
+                android:gravity="top|left"
+                android:hint="Enter Your Message."
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:textColorHint="#000000"></EditText>
+
+
+
+            <Button
+                android:id="@+id/ButtonSendFeedback"
+                android:layout_height="40dp"
+                android:text="Submit"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:background="@color/colorPrimaryDark">
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

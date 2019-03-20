@@ -1,8 +1,11 @@
 package com.mahe.evento;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +16,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    Fragment feedbackFragment = new FeedbackFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +76,9 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(MainActivity.this,SignupActivity.class));
+            finish();
             return true;
         }
 
@@ -82,22 +91,39 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_aboutus) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_services) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_decor) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_pavpackages) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_bookevent) {
 
-        } else if (id == R.id.nav_send) {
+        }else if (id == R.id.nav_signout) {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(MainActivity.this,SignupActivity.class));
+            finish();
 
+        }else if (id == R.id.nav_contact) {
+
+        }else if (id == R.id.nav_Feedback) {
+
+            loadfragment(feedbackFragment);
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
+
+    }
+    private void loadfragment(Fragment frag){
+        FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
+                trans.replace(R.id.main_fragment,frag);
+                trans.addToBackStack(null);
+                trans.commit();
     }
 }
