@@ -17,12 +17,12 @@
 
 
         <ImageView
-            android:layout_width="346dp"
-            android:layout_height="340dp"
+            android:id="@+id/splashapplogo"
+            android:layout_width="344dp"
+            android:layout_height="295dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="30dp"
-            android:src="@mipmap/evento_white"
-            android:id="@+id/splashapplogo"/>
+            android:src="@drawable/white_evento" />
 
 
 

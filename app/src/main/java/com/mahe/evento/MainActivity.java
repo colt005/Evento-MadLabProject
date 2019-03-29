@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Fragment feedbackFragment = new FeedbackFragment();
+    Fragment aboutusFragment = new AboutUsFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        loadfragment(aboutusFragment);
 
 
 
@@ -92,7 +94,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_aboutus) {
-            // Handle the camera action
+            loadfragment(aboutusFragment);
         } else if (id == R.id.nav_services) {
 
         } else if (id == R.id.nav_decor) {

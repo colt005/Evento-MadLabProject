@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.mahe.evento.MainActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivAppLogo"
+                android:layout_width="101dp"
+                android:layout_height="101dp"
+                android:layout_gravity="center"
+                android:src="@drawable/black_evento" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorAccent"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAboutus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="monospace"
+                android:text="About Us"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:layout_margin="@dimen/fab_margin"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="Our expertise covers all the aspects of Events: Planning, Management and Coordination and Execution. We deliver cost effective events without compromising on the final output. Our aim is to provide the best event management service possible, every event receives our full commitment and dedicated attention, giving you complete faith that your event will run smoothly. We provide event management services throughout the state, and pride ourselves as an event management company dedicated to providing the highest possible service. We assign a dedicated project manager to your event will be at your side from start to finish, We take pride in the fact that no detail or service is too small, and no event too complex for our experts So if it's personal. business or any combination of the two, please contact Evento today and see how we can ensure your event is a complete success."
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="17dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/colorAccent"
+                android:alpha="100">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:text="Please contact evento@gmail.com for any further queries."
+                    android:textAlignment="center"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+</ScrollView>
