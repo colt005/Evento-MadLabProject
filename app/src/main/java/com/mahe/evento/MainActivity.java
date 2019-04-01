@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Fragment feedbackFragment = new FeedbackFragment();
     Fragment aboutusFragment = new AboutUsFragment();
+    Fragment bookeventFragment = new BookEvent();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         loadfragment(aboutusFragment);
-
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -55,10 +55,18 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
+        int count = getSupportFragmentManager().getBackStackEntryCount();
+
+        if (count == 0) {
             super.onBackPressed();
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            } else {
+                super.onBackPressed();
+            }
+            //additional code
+        } else {
+            getSupportFragmentManager().popBackStack();
         }
     }
 
@@ -79,7 +87,7 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(MainActivity.this,SignupActivity.class));
+            startActivity(new Intent(MainActivity.this, SignupActivity.class));
             finish();
             return true;
         }
@@ -102,15 +110,15 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_pavpackages) {
 
         } else if (id == R.id.nav_bookevent) {
-
-        }else if (id == R.id.nav_signout) {
+            loadfragment(bookeventFragment);
+        } else if (id == R.id.nav_signout) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(MainActivity.this,SignupActivity.class));
+            startActivity(new Intent(MainActivity.this, SignupActivity.class));
             finish();
 
-        }else if (id == R.id.nav_contact) {
+        } else if (id == R.id.nav_contact) {
 
-        }else if (id == R.id.nav_Feedback) {
+        } else if (id == R.id.nav_Feedback) {
 
             loadfragment(feedbackFragment);
         }
@@ -122,10 +130,15 @@ public class MainActivity extends AppCompatActivity
 
 
     }
-    private void loadfragment(Fragment frag){
+
+    private void loadfragment(Fragment frag) {
         FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
-                trans.replace(R.id.main_fragment,frag);
-                trans.addToBackStack(null);
-                trans.commit();
+
+        trans.replace(R.id.main_fragment, frag);
+        trans.addToBackStack(null);
+        trans.commit();
+
     }
+
+
 }

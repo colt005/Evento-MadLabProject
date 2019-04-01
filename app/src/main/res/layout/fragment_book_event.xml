@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".BookEvent">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event type:"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv"
+            android:layout_alignRight="@id/tv"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="122dp"
+            android:layout_marginRight="-123dp" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:text="Venue:" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignTop="@+id/tv1"
+            android:layout_alignRight="@id/tv"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="122dp"
+            android:layout_marginRight="-123dp" />
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="150dp"
+            android:text="Date:" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="200dp"
+            android:text="Time slot:" />
+        <TextView
+            android:id="@+id/foodtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="300dp"
+            android:text="Food preferences:" />
+        <CheckBox
+            android:id="@+id/br"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="330dp"
+            android:text="Breakfast"
+            />
+        <CheckBox
+            android:id="@+id/lu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="360dp"
+            android:text="Lunch"
+            />
+        <CheckBox
+            android:id="@+id/sn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="390dp"
+            android:text="Snacks"
+            />
+        <CheckBox
+            android:id="@+id/di"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="420dp"
+            android:text="Dinner"
+            />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignTop="@+id/tv2"
+            android:layout_alignRight="@id/tv"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="122dp"
+            android:layout_marginRight="-123dp" />
+
+        <Button
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            android:text="CHECK AVAILABILITY" />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="135dp"
+            android:layout_marginEnd="77dp"
+            android:ems="10"
+            android:inputType="date" />
+        <TextView
+            android:id="@+id/eq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="460dp"
+            android:text="Equipment:" />
+        <CheckBox
+            android:id="@+id/mi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="480dp"
+            android:text="Mike"
+            />
+
+        <CheckBox
+            android:id="@+id/sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="106dp"
+            android:layout_marginTop="480dp"
+            android:text="Speakers" />
+
+        <CheckBox
+            android:id="@+id/dj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="216dp"
+            android:layout_marginTop="480dp"
+            android:text="Dj" />
+        <TextView
+            android:id="@+id/dec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="520dp"
+            android:text="Decorations:" />
+        <CheckBox
+            android:id="@+id/fl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="540dp"
+            android:text="Flowers"
+            />
+
+        <CheckBox
+            android:id="@+id/li"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="106dp"
+            android:layout_marginTop="540dp"
+            android:text="Lighting" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="570dp"
+            android:text="FIND COST"
+            android:id="@+id/cost"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="620dp"
+            android:text="Proceed to Payment?"
+            android:textStyle="bold"
+            android:id="@+id/pay"
+            />
+
+    </RelativeLayout>
